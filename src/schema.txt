@@ -1,0 +1,15 @@
+src/
+ ├─ components/
+ │   ├─ Header.jsx
+ │   ├─ Footer.jsx
+ │   ├─ Navbar.jsx
+ │   ├─ Logo.jsx
+ │   ├─ Notebooks.jsx
+ │   ├─ Analyzer.jsx
+ │   └─ Content.jsx
+ ├─ pages/
+ │   ├─ Home.jsx    ← for main page with Section, Notebooks, Analyzer, Content
+ │   ├─ About.jsx   ← another page example
+ │   └─ ... other pages
+ ├─ App.jsx
+ └─ index.jsx
