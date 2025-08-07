@@ -6,6 +6,7 @@ import { About } from "../components/About"
 import { Contact } from "../components/Contact"
 import { HomeLayout } from "../Auth/HomeLayout"
 import Main from "../components/Main"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 
 
@@ -50,10 +51,13 @@ const router = createBrowserRouter([
 
 function Router(){
 
+
+  const queryClient = new QueryClient()
+
     return(
-     <>
+     <QueryClientProvider client={queryClient}>
      <RouterProvider router={router}/>
-     </>
+     </QueryClientProvider>
     )
 }
 

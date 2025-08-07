@@ -13,6 +13,8 @@ function Header() {
   ];
 
   return (
+    <div>
+<div className=" h-[13vh]"></div>
     <div className="border border-blue-100 bg-white shadow-blue-100 shadow-2xs fixed flex items-center h-18 top-4 rounded-[4rem] left-1/2 transform -translate-x-1/2 justify-center gap-165 w-[50%]">
       <h1>
         <DiMagento size={23} className="text-blue-950" />
@@ -22,8 +24,8 @@ function Header() {
         <ul className="flex gap-8 text-[1.5rem] font-medium">
           {pages.map((item) => (
             <li
-              key={item.path}
-              className="relative group cursor-pointer w-fit text-blue-950"
+            key={item.path}
+            className="relative group cursor-pointer w-fit text-blue-950"
             >
               <Link to={item.path}>{item.name}</Link>
               <span
@@ -31,13 +33,14 @@ function Header() {
                   absolute left-0 bottom-0 h-[.2rem] w-0 bg-blue-950 transition-all duration-300
                   group-hover:w-full
                   ${(item.path === currentPath || currentPath === "/home") ? "w-full" : ""}
-                `}
-              ></span>
+                  `}
+                  ></span>
             </li>
           ))}
         </ul>
       </nav>
     </div>
+          </div>
   );
 }
 
