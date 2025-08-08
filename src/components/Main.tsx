@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import { CiEdit } from "react-icons/ci";
+import { MdMenuBook } from "react-icons/md";
 
 
 type FieldData = {
@@ -24,8 +25,8 @@ queryFn : ()=> fetch("https://688bce19cd9d22dda5cb5584.mockapi.io/api/v1/notions
 console.log(data)
 
     return(
-     <div className=" p-2 w-full flex flex-col gap-1 bg-blue-50 rounded-r-2xl border-2 border-blue-100  h-auto min-h-[80vh]   ">
-{data && data.map((item : FieldData)=> (
+     <div className=" p-2 w-full flex flex-col gap-1 bg-blue-50 rounded-r-2xl rounded-tr-none   border-2 border-blue-100  h-auto min-h-[80vh]   ">
+{data && data.length > 0 ?    (  data.map((item : FieldData)=> (
 
     <div key={item.id} className=" hover:bg-blue-50 border-2 bg-blue-100 border-blue-100 rounded-r-2xl flex items-center gap-9 p-3 text-[1.4rem]">
     <p className="w-[50%]">{item.folderName}</p>
@@ -34,7 +35,9 @@ console.log(data)
 
     <p className="  w-[15%] text-center underline  text-blue-950  ">delete</p>
 </div>
-))}
+))) : (<div className="w-full h-full flex items-center justify-center">
+    <MdMenuBook  size={100}  className="text-blue-100"/>
+</div> )}
 
      </div>
     )

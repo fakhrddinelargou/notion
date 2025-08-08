@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <div>
-<div className=" h-[13vh]"></div>
+{/* <div className=" h-[13vh]"></div> */}
     <div className="border border-blue-100 bg-white shadow-blue-100 shadow-2xs fixed flex items-center h-18 top-4 rounded-[4rem] left-1/2 transform -translate-x-1/2 justify-center gap-165 w-[50%]">
       <h1>
         <DiMagento size={23} className="text-blue-950" />
